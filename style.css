@@ -1,0 +1,97 @@
+body{
+    background: #DFE9EF;
+    width: 100vw;
+    height: 100vh;
+  }
+  .drone{
+    position: relative;
+    margin: 100px auto;
+    width: 300px;
+    height: 300px;
+    animation: all 2.5s infinite ease-in-out;
+    transition: all .1s;
+  }
+  .droneBody{
+    width: 338px;
+    height: 299px;
+    animation: drone 3s infinite ease-in-out;
+    overflow: hidden;
+    
+  }
+  .overlay{
+    width: 100px;
+    height: 219px;
+    z-index: 1;
+    position: absolute;
+    top: 14px;
+    left: 120px;
+  
+    /* Rectangle 3: */
+    background-image: linear-gradient(-237deg, rgba(238,238,238,.8) 20%, rgba(216,216,216,0.00) 79%);
+    opacity: .6;
+    animation: overlay 2.5s infinite ease-in-out;
+  }
+  .prop{
+    width: 62px;
+    height: 112px;
+    
+    transform-origin: 47.2% 50.1%;
+  }
+  .prop1{
+    position: absolute;
+    left: 16px;
+    top: -26px;
+    animation: prop .5s infinite linear;
+  }
+  .prop2{
+    position: absolute;
+    right: -25px;
+    top: -27px;
+    animation: ccw .5s infinite linear;
+  }
+  .prop3{
+    position: absolute;
+    right: -26px;
+    bottom: 12px;
+    animation: prop .5s infinite linear;
+  }
+  .prop4{
+    position: absolute;
+    left: 16px;
+    bottom: 9px;
+    animation: ccw .5s infinite linear;
+    
+  }
+  
+  @keyframes prop{
+    100%{
+      transform: rotate(920deg);
+    }
+  }
+  @keyframes ccw{
+    100%{
+      transform: rotate(-920deg);
+    }
+  }
+  @keyframes drone{
+    0%{
+      filter: drop-shadow( 0 10px 0px rgba(0,0,0,.2));
+    }
+    50%{
+      filter: drop-shadow( 0 25px 3px rgba(0,0,0,.1));
+    }
+    100%{
+      filter: drop-shadow( 0 10px 0px rgba(0,0,0,.2));
+    }
+  }
+  @keyframes all{
+    50%{
+      transform: scale(1.08) rotateZ(1.5deg) rotateY(10deg);
+    }
+  }
+  @keyframes overlay{
+    50%{
+      transform: scale(1) ;
+      opacity: .2;
+    }
+  }
